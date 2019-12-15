@@ -1,0 +1,17 @@
+
+{% block body %}
+
+{% if articles %}
+
+<ul class="list-group">
+   {% for article in articles %}
+   <li class = "list-group-item">{{article.isim}}</li>
+   {% endfor %}
+</ul>
+
+{% else %}
+
+<div class = "alert alert-danger">Bu blokta henüz makale bulunmuyor...</div>
+{% endif %}
+
+{% endblock body %}
